@@ -3,10 +3,6 @@ from datetime import date # to get todays date
 
 st.title("Hello App")
 
-"""
-On opening the app, the user will enter their name and select their date of birth.
-"""
-
 user_name= st.text_input("Your name")
 user_dob = st.date_input(
     "Your date of birth", 
@@ -15,10 +11,6 @@ user_dob = st.date_input(
     value=date(1990, 1, 1),
     format="DD/MM/YYYY"
     )
-
-"""
-From the user inputs, it'll take the DOB and work out how many days they've been alive for.
-"""
 
 if user_name:
     age_days = (date.today() - user_dob).days
